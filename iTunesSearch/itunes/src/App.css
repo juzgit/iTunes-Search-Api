@@ -1,0 +1,158 @@
+
+body{
+  background: radial-gradient(circle at 100%, blue, lightblue);
+  min-height: 100vh;
+}
+
+.App{
+  margin: auto;
+  width: 60%;
+  margin-top: 35px;
+  padding: 25px;
+}
+
+.name-heading{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    orange 0%,
+    rgba(128, 0, 128, 0.329) 26%,
+    rgb(185, 6, 6) 68%,
+    yellow 100%
+  );
+  color: lightgreen;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 56px;
+}
+
+@keyframes textclip{
+  to{
+    background-position: 200% center;
+  }
+}
+
+span{
+  display:block;
+}
+
+.sub-text{
+  color: black;
+  text-align: center;
+  font-size: larger;
+}
+
+.search-container{
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+}
+
+input[type="text"], select{
+  margin-block: 7px;
+  margin-left: 15rem;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+
+input[type="text"]:focus{
+  border:none;
+  width: 350px;
+}
+
+.search-btn{
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  width: 20%;
+  margin-left: 18rem;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.search-btn:hover{
+  background-color: black;
+  color:yellow;
+}
+
+.results{
+  padding: 6px;
+  background: linear-gradient(to bottom, orange, rgba(103, 212, 13, 0.966));
+}
+
+.results-heading{
+  text-align: center;
+
+}
+
+.result-item{
+  padding: 15px;
+}
+
+.results-trackName{
+  color: white;
+}
+
+.results-artist{
+  color: white;
+}
+
+.add-btn{
+  padding: 9px;
+  border: none;
+  border-radius: 8px;
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.add-btn:hover{
+  background-color: darkgreen;
+  color: white;
+}
+
+.delete-btn{
+  padding: 9px;
+  border: none;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-icon{
+  margin-inline: 6px  ;
+}
+
+.favourites{
+  padding: 6px;
+  background: radial-gradient(circle at 100%, pink, yellow);
+}
+
+.fav-heading{
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-family: 'Playpen Sans', cursive;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Tektur', sans-serif;
+}
+
+.fav-item{
+  padding: 15px;
+}
+
+.favs-trackName, .favs-artist{
+  color: black;
+}
+
+.artwork{
+  height: 100%;
+}
+
+
