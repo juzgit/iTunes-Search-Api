@@ -13,7 +13,7 @@ function App() {
   //fetching search results from the API based on the search term and media type.
   const search = async () => {
     try{
-      const response = await fetch(`search?term=${getTerm}&media=${getMedia}`);
+      const response = await fetch(`https://itunes-search-api-fpsl.onrender.com/search?term=${getTerm}&media=${getMedia}`);
       if(!response.ok){
         throw new Error(`HTTP error: status: ${response.status}`);
       }
