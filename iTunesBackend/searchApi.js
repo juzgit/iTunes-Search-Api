@@ -2,6 +2,7 @@ const express = require("express"); //importing the express module
 const bodyParser = require("body-parser"); //importing the body-parser module
 const app = express(); //creating an instance of the Express application
 const PORT = process.env.PORT|| 8000; //setting the port number for the server
+const fetch = require('node-fetch');
 const helmet = require('helmet');
 
 app.use(bodyParser.json()); //middleware to parse json data
