@@ -14,8 +14,16 @@ function App() {
   const search = async () => {
     try{
       const response = await fetch(`search?term=${getTerm}&media=${getMedia}`);
-      const data = await response.json();
-      setResults(data.results); //update the results state with the fetched search results.
+      if(!response.ok){
+        throw new Error(`HTTP error: status: ${response.status}`);
+      }
+      const contentType = response.headers.get('content-type');
+      if(contentType && contentType.includes('application/json')){
+        const data = await response.json();
+        setResults(data.results); //update the results state with the fetched search results.
+      } else {
+        console.error("Response is not in JSON format");
+      }
     } catch (error){ //log any errors that occur during the data fetching process.
       console.error("Error fetching data: ", error);
     }
