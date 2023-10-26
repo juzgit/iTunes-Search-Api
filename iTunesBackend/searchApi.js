@@ -9,8 +9,9 @@ import cors from 'cors';
 app.use(bodyParser.json()); //middleware to parse json data
 app.use(helmet());
 app.use(cors({
-    origin:'https://itunes-search-ui.onrender.com/',
-    optionsSuccessStatus:200
+    origin:'https://itunes-search-ui.onrender.com',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
 }));
 
 app.get("/search", async (req, res) => {
