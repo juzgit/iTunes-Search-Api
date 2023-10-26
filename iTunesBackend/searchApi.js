@@ -4,9 +4,14 @@ const app = express(); //creating an instance of the Express application
 const PORT = process.env.PORT|| 8000; //setting the port number for the server
 import fetch from 'node-fetch'
 import helmet from 'helmet';
+import cors from 'cors';
 
 app.use(bodyParser.json()); //middleware to parse json data
 app.use(helmet());
+app.use(cors({
+    origin:'https://itunes-search-ui.onrender.com/',
+    optionsSuccessStatus:200
+}));
 
 app.get("/search", async (req, res) => {
     const { term, media } = req.query; //extracting the "term" and "media" query parameters from the request
