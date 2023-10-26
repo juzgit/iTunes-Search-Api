@@ -1,6 +1,7 @@
 {
   "name": "itunessearch",
   "version": "1.0.0",
+  "type": "module",
   "description": "iTunes Search App",
   "main": "searchApi.js",
   "scripts": {
